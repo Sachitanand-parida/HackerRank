@@ -1,0 +1,17 @@
+public static int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2) {
+    // Write your code here
+
+    if(y1-y2>=1)			//same year= no fine, different year=10000 fine
+    return 10000*(y1-y2);
+    
+    else if(m1-m2>=1 &&y1==y2)		//same year but different month=500*(diff of months)
+    return 500*(m1-m2);
+    
+    else if (d1-d2>=1&& m1==m2 && y1==y2)	//same year, same month, different date
+    return 15*(d1-d2);
+    
+    else return 0;
+
+    }
+
+}
